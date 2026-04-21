@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Elnaz Rezaei — Social Media and Digital Communications</title>
-<meta name="description" content="Portfolio of Elnaz Rezaei, Social Media Manager and Content Strategist based in Giessen, Germany.">
+<title>Elnaz Rezaei — Digital Marketing and Brand Communications</title>
+<meta name="description" content="Portfolio of Elnaz Rezaei, Digital Marketing and Brand Communications professional based in Giessen, Germany.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
 <style>
@@ -24,13 +24,15 @@
 html{scroll-behavior:smooth}
 body{font-family:'DM Sans',sans-serif;background:var(--white);color:var(--navy);font-size:16px;line-height:1.6}
 
-/* ── HERO ── */
+/* HERO */
 .hero{background:linear-gradient(135deg,#004a80 0%,#006ab3 55%,#1a7ec8 100%);padding:3.5rem 2.5rem 2.5rem;position:relative;overflow:hidden}
 .hero::before{content:'';position:absolute;right:-60px;top:-60px;width:260px;height:260px;border-radius:50%;background:rgba(164,190,223,0.1);pointer-events:none}
 .hero::after{content:'';position:absolute;right:60px;bottom:-70px;width:160px;height:160px;border-radius:50%;background:rgba(200,160,188,0.08);pointer-events:none}
-.hero-inner{max-width:var(--max);margin:0 auto;position:relative;z-index:1}
+.hero-inner{max-width:var(--max);margin:0 auto;position:relative;z-index:1;display:flex;justify-content:space-between;align-items:center;gap:2rem}
+.hero-text{flex:1}
+.hero-photo{width:110px;height:110px;border-radius:50%;border:3px solid rgba(255,255,255,0.3);object-fit:cover;flex-shrink:0}
 .hero h1{font-family:'Cormorant Garamond',serif;font-size:3.2rem;font-weight:500;color:#fff;line-height:1.0;letter-spacing:-0.01em}
-.hero h1 em{font-style:italic;color:var(--pale)}
+.hero h1 em{font-style:normal;color:var(--white)}
 .hero-role{font-size:0.78rem;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.58);margin-top:0.5rem;font-weight:300}
 .hero-chips{display:flex;gap:0.45rem;flex-wrap:wrap;margin-top:1.1rem}
 .chip{padding:0.25rem 0.85rem;border:1px solid rgba(164,190,223,0.45);color:rgba(255,255,255,0.82);font-size:0.74rem;border-radius:20px;font-family:'DM Sans',sans-serif}
@@ -40,21 +42,21 @@ body{font-family:'DM Sans',sans-serif;background:var(--white);color:var(--navy);
 .hero-meta a{font-size:0.8rem;color:var(--pale);text-decoration:none}
 .hero-meta a:hover{text-decoration:underline}
 
-/* ── NAV ── */
+/* NAV */
 .nav-wrap{position:sticky;top:0;z-index:100;background:var(--white);border-bottom:1px solid var(--border)}
 nav{max-width:var(--max);margin:0 auto;display:flex;overflow-x:auto}
 nav a{flex:1;min-width:80px;padding:0.85rem 0.5rem;font-size:0.72rem;letter-spacing:0.09em;text-transform:uppercase;color:var(--lgray);text-decoration:none;text-align:center;border-bottom:2px solid transparent;transition:color 0.18s,border-color 0.18s;white-space:nowrap;font-family:'DM Sans',sans-serif}
 nav a:hover{color:var(--mid)}
 nav a.active{color:var(--navy);border-bottom-color:var(--mid)}
 
-/* ── SECTIONS ── */
+/* SECTIONS */
 section{display:none;padding:2.2rem 2.5rem}
 section.active{display:block}
 .inner{max-width:var(--max);margin:0 auto}
 .sec-label{font-size:0.68rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--mid);margin-bottom:1.5rem;display:flex;align-items:center;gap:0.7rem}
 .sec-label::after{content:'';flex:1;height:1px;background:var(--border)}
 
-/* ── ABOUT ── */
+/* ABOUT */
 .bio{font-size:0.95rem;color:var(--gray);line-height:1.85;font-weight:300;max-width:540px}
 .bio strong{color:var(--navy);font-weight:500}
 .quick{display:grid;grid-template-columns:1fr 1fr;gap:0.7rem;margin-top:1.4rem}
@@ -62,12 +64,12 @@ section.active{display:block}
 .qf-l{font-size:0.65rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--lgray);margin-bottom:0.2rem}
 .qf-v{font-size:0.88rem;color:var(--navy);font-weight:500}
 
-/* ── STATS BANNER ── */
+/* STATS */
 .stats{background:var(--navy);padding:1.5rem 1.8rem;margin-bottom:1.8rem;display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
 .sn{font-family:'Cormorant Garamond',serif;font-size:2.1rem;font-weight:600;color:var(--pale);line-height:1;text-align:center}
 .sl{font-size:0.65rem;letter-spacing:0.08em;text-transform:uppercase;color:rgba(255,255,255,0.48);margin-top:0.3rem;text-align:center}
 
-/* ── PROJECT BLOCKS ── */
+/* PROJECT BLOCKS */
 .proj-block{margin-bottom:2.2rem;padding-bottom:2.2rem;border-bottom:1px solid var(--border)}
 .proj-block:last-child{border:none;margin-bottom:0;padding-bottom:0}
 .proj-head{display:flex;align-items:center;gap:1rem;margin-bottom:0.9rem}
@@ -84,7 +86,7 @@ section.active{display:block}
 .mn{font-size:1.18rem;font-weight:500;color:var(--navy);line-height:1}
 .ml{font-size:0.63rem;color:var(--lgray);margin-top:0.22rem;text-transform:uppercase;letter-spacing:0.06em}
 
-/* ── POST CARDS ── */
+/* POST CARDS */
 .sub-lbl{font-size:0.67rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--lgray);margin-bottom:0.65rem}
 .posts{display:grid;grid-template-columns:1fr 1fr;gap:0.8rem;margin-bottom:1.4rem}
 .post{border:1px solid var(--border);padding:0.9rem;position:relative}
@@ -95,27 +97,28 @@ section.active{display:block}
 .ps strong{color:var(--mid);font-weight:500}
 .er{position:absolute;top:0.75rem;right:0.75rem;background:var(--mid);color:#fff;font-size:0.67rem;font-weight:500;padding:0.15rem 0.55rem;border-radius:20px}
 .er.gold{background:#9a6e10}
+.er.green{background:#2e7d4f}
 
-/* ── SERIES CARDS ── */
+/* SERIES */
 .series{border:1px solid var(--border);border-left:3px solid var(--light);padding:1.05rem;margin-bottom:0.65rem}
 .series h4{font-size:0.86rem;font-weight:500;color:var(--navy);margin-bottom:0.28rem}
 .series p{font-size:0.81rem;color:var(--lgray);line-height:1.6}
 
-/* ── SKILLS ── */
+/* SKILLS */
 .skill-grid{display:grid;grid-template-columns:1fr 1fr;gap:0.85rem}
 .sk{border:1px solid var(--border);padding:1.05rem}
 .sk h4{font-size:0.66rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--mid);margin-bottom:0.75rem}
 .pill{display:inline-block;background:var(--pale);color:var(--navy);font-size:0.77rem;padding:0.2rem 0.6rem;margin:0.16rem 0.1rem;border-radius:12px}
 .pill.r{background:var(--blush);color:#7a3a62}
 
-/* ── EDUCATION ── */
+/* EDUCATION */
 .edu-row{display:flex;gap:1.6rem;padding:1rem 0;border-bottom:1px solid var(--border);align-items:flex-start}
 .edu-row:last-child{border:none}
 .edu-yr{font-size:0.77rem;color:var(--lgray);min-width:80px;padding-top:0.15rem;font-style:italic;flex-shrink:0}
 .edu-deg{font-size:0.95rem;font-weight:500;color:var(--navy);margin-bottom:0.14rem}
 .edu-sch{font-size:0.82rem;color:var(--mid)}
 
-/* ── CONTACT ── */
+/* CONTACT */
 .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:0.85rem;margin-bottom:1.5rem}
 .ci{padding:0.95rem 1.1rem;border:1px solid var(--border)}
 .ci.hi{border-color:var(--mid);border-top-width:2px}
@@ -124,7 +127,7 @@ section.active{display:block}
 .ci-v a{color:var(--navy);text-decoration:none}
 .ci-v a:hover{color:var(--mid);text-decoration:underline}
 
-/* ── COVER LETTER ── */
+/* COVER LETTER */
 .cl-box{border:1px solid var(--border);border-top:3px solid var(--mid);padding:1.7rem;margin-top:0.5rem}
 .cl-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:1.3rem;flex-wrap:wrap;gap:0.6rem}
 .cl-name{font-family:'Cormorant Garamond',serif;font-size:1.18rem;font-weight:500;color:var(--navy)}
@@ -136,7 +139,7 @@ section.active{display:block}
 .cl-sign{margin-top:1.3rem;font-size:0.87rem;color:var(--navy)}
 .cl-sign .sig{font-family:'Cormorant Garamond',serif;font-size:1.15rem;margin-top:0.35rem;font-style:italic}
 
-/* ── RESPONSIVE ── */
+/* RESPONSIVE */
 @media(max-width:580px){
   .hero h1{font-size:2.4rem}
   .stats{grid-template-columns:repeat(2,1fr)}
@@ -153,20 +156,24 @@ section.active{display:block}
 <body>
 
 <header class="hero">
-  <div class="hero-inner">
+ <div class="hero-inner">
+  <div class="hero-text">
     <h1>Elnaz <em>Rezaei</em></h1>
     <p class="hero-role">Digital Marketing &middot; Brand Communications &middot; Content Strategy</p>
     <div class="hero-chips">
       <span class="chip">Gie&szlig;en, Germany</span>
       <span class="chip">Available 2026</span>
       <span class="chip r">EN C2 &middot; DE C1 &middot; FA native</span>
+      <span class="chip">Born in 2000</span>
     </div>
     <div class="hero-meta">
       <span>+49 152 285 94211</span>
       <a href="mailto:elnaz.rezaei2000@gmail.com">elnaz.rezaei2000@gmail.com</a>
       <a href="https://linkedin.com/in/elnaz-rezaei2000" target="_blank" rel="noopener">linkedin.com/in/elnaz-rezaei2000</a>
-    </div>
+   </div>
   </div>
+  <img src="elnazrezaei.png" alt="Elnaz Rezaei" class="hero-photo">
+</div>
 </header>
 
 <div class="nav-wrap">
@@ -183,7 +190,7 @@ section.active{display:block}
 <section id="about" class="active">
   <div class="inner">
     <div class="sec-label">About me</div>
-    <p class="bio">I am a digital marketing and communications professional with <strong>over two and a half years of experience</strong> building brand presence, creating content strategies, and driving measurable engagement for organisations at JLU Giessen. I love the full picture of marketing: understanding an audience, shaping a brand voice, producing content that actually connects, and using data to make it better over time. My <strong>MA in Anglophone Literatures, Culture and Media</strong> gives me a strong foundation in how people communicate and what makes a message land, and being fluent in English, German, and Persian means I can bring that instinct to audiences across markets.</p>
+    <p class="bio">I am a digital marketing and communications professional with <strong>over two and a half years of experience</strong> building brand presence, developing content strategies, and driving measurable engagement for organisations at JLU Giessen. I love the full picture of marketing: understanding an audience, shaping a brand voice, producing content that actually connects, and using data to make it better over time. My <strong>MA in Anglophone Literatures, Culture and Media</strong> gives me a strong foundation in how people communicate and what makes a message land, and being fluent in English, German, and Persian means I can bring that instinct to audiences across markets.</p>
     <div class="quick">
       <div class="qf"><div class="qf-l">Current role</div><div class="qf-v">Social Media and Web Assistant, GCSC</div></div>
       <div class="qf"><div class="qf-l">Avg. LinkedIn engagement</div><div class="qf-v">31.3% (industry avg: 1 to 3%)</div></div>
