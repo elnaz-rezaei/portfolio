@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Elnaz Rezaei — Social Media and Digital Communications</title>
+<meta name="description" content="Portfolio of Elnaz Rezaei, Social Media Manager and Content Strategist based in Giessen, Germany.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --navy:#00528d;
+  --mid:#006ab3;
+  --light:#a4bedf;
+  --pale:#e0ebfa;
+  --white:#ffffff;
+  --gray:#4a5a6b;
+  --lgray:#8ea3b8;
+  --border:#ccddf0;
+  --blush:#f7f0f4;
+  --max:760px;
+}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;background:var(--white);color:var(--navy);font-size:16px;line-height:1.6}
+
+/* ── HERO ── */
+.hero{background:linear-gradient(135deg,#004a80 0%,#006ab3 55%,#1a7ec8 100%);padding:3.5rem 2.5rem 2.5rem;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;right:-60px;top:-60px;width:260px;height:260px;border-radius:50%;background:rgba(164,190,223,0.1);pointer-events:none}
+.hero::after{content:'';position:absolute;right:60px;bottom:-70px;width:160px;height:160px;border-radius:50%;background:rgba(200,160,188,0.08);pointer-events:none}
+.hero-inner{max-width:var(--max);margin:0 auto;position:relative;z-index:1}
+.hero h1{font-family:'Cormorant Garamond',serif;font-size:3.2rem;font-weight:500;color:#fff;line-height:1.0;letter-spacing:-0.01em}
+.hero h1 em{font-style:italic;color:var(--pale)}
+.hero-role{font-size:0.78rem;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.58);margin-top:0.5rem;font-weight:300}
+.hero-chips{display:flex;gap:0.45rem;flex-wrap:wrap;margin-top:1.1rem}
+.chip{padding:0.25rem 0.85rem;border:1px solid rgba(164,190,223,0.45);color:rgba(255,255,255,0.82);font-size:0.74rem;border-radius:20px;font-family:'DM Sans',sans-serif}
+.chip.r{border-color:rgba(200,160,188,0.55);background:rgba(200,160,188,0.08)}
+.hero-meta{margin-top:1.5rem;display:flex;gap:2rem;flex-wrap:wrap}
+.hero-meta span{font-size:0.8rem;color:rgba(255,255,255,0.52)}
+.hero-meta a{font-size:0.8rem;color:var(--pale);text-decoration:none}
+.hero-meta a:hover{text-decoration:underline}
+
+/* ── NAV ── */
+.nav-wrap{position:sticky;top:0;z-index:100;background:var(--white);border-bottom:1px solid var(--border)}
+nav{max-width:var(--max);margin:0 auto;display:flex;overflow-x:auto}
+nav a{flex:1;min-width:80px;padding:0.85rem 0.5rem;font-size:0.72rem;letter-spacing:0.09em;text-transform:uppercase;color:var(--lgray);text-decoration:none;text-align:center;border-bottom:2px solid transparent;transition:color 0.18s,border-color 0.18s;white-space:nowrap;font-family:'DM Sans',sans-serif}
+nav a:hover{color:var(--mid)}
+nav a.active{color:var(--navy);border-bottom-color:var(--mid)}
+
+/* ── SECTIONS ── */
+section{display:none;padding:2.2rem 2.5rem}
+section.active{display:block}
+.inner{max-width:var(--max);margin:0 auto}
+.sec-label{font-size:0.68rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--mid);margin-bottom:1.5rem;display:flex;align-items:center;gap:0.7rem}
+.sec-label::after{content:'';flex:1;height:1px;background:var(--border)}
+
+/* ── ABOUT ── */
+.bio{font-size:0.95rem;color:var(--gray);line-height:1.85;font-weight:300;max-width:540px}
+.bio strong{color:var(--navy);font-weight:500}
+.quick{display:grid;grid-template-columns:1fr 1fr;gap:0.7rem;margin-top:1.4rem}
+.qf{background:var(--pale);padding:0.9rem 1.1rem;border-left:3px solid var(--mid)}
+.qf-l{font-size:0.65rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--lgray);margin-bottom:0.2rem}
+.qf-v{font-size:0.88rem;color:var(--navy);font-weight:500}
+
+/* ── STATS BANNER ── */
+.stats{background:var(--navy);padding:1.5rem 1.8rem;margin-bottom:1.8rem;display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
+.sn{font-family:'Cormorant Garamond',serif;font-size:2.1rem;font-weight:600;color:var(--pale);line-height:1;text-align:center}
+.sl{font-size:0.65rem;letter-spacing:0.08em;text-transform:uppercase;color:rgba(255,255,255,0.48);margin-top:0.3rem;text-align:center}
+
+/* ── PROJECT BLOCKS ── */
+.proj-block{margin-bottom:2.2rem;padding-bottom:2.2rem;border-bottom:1px solid var(--border)}
+.proj-block:last-child{border:none;margin-bottom:0;padding-bottom:0}
+.proj-head{display:flex;align-items:center;gap:1rem;margin-bottom:0.9rem}
+.proj-logo{width:42px;height:42px;border-radius:7px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-weight:700;font-size:0.74rem;letter-spacing:0.04em}
+.proj-logo.g{background:var(--pale);color:var(--navy);border:1px solid var(--border)}
+.proj-logo.h{background:#ddeeff;color:var(--mid);border:1px solid var(--border)}
+.proj-name{font-size:1.05rem;font-weight:500;color:var(--navy)}
+.proj-period{font-size:0.78rem;color:var(--lgray);font-style:italic;margin-top:0.05rem}
+.proj-desc{font-size:0.88rem;color:var(--gray);line-height:1.75;margin-bottom:1.1rem}
+.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:0.55rem;margin-bottom:1.3rem}
+.metric{background:var(--pale);padding:0.7rem 0.75rem;text-align:center;border-top:2px solid var(--mid)}
+.metric.hi{border-top-color:var(--mid)}
+.metric.hi .mn{color:var(--mid)}
+.mn{font-size:1.18rem;font-weight:500;color:var(--navy);line-height:1}
+.ml{font-size:0.63rem;color:var(--lgray);margin-top:0.22rem;text-transform:uppercase;letter-spacing:0.06em}
+
+/* ── POST CARDS ── */
+.sub-lbl{font-size:0.67rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--lgray);margin-bottom:0.65rem}
+.posts{display:grid;grid-template-columns:1fr 1fr;gap:0.8rem;margin-bottom:1.4rem}
+.post{border:1px solid var(--border);padding:0.9rem;position:relative}
+.post-tag{font-size:0.64rem;letter-spacing:0.07em;text-transform:uppercase;color:var(--mid);margin-bottom:0.3rem;font-weight:500}
+.post-title{font-size:0.84rem;color:var(--navy);font-weight:500;margin-bottom:0.55rem;line-height:1.45}
+.post-stats{display:flex;gap:0.75rem;flex-wrap:wrap}
+.ps{font-size:0.74rem;color:var(--lgray)}
+.ps strong{color:var(--mid);font-weight:500}
+.er{position:absolute;top:0.75rem;right:0.75rem;background:var(--mid);color:#fff;font-size:0.67rem;font-weight:500;padding:0.15rem 0.55rem;border-radius:20px}
+.er.gold{background:#9a6e10}
+
+/* ── SERIES CARDS ── */
+.series{border:1px solid var(--border);border-left:3px solid var(--light);padding:1.05rem;margin-bottom:0.65rem}
+.series h4{font-size:0.86rem;font-weight:500;color:var(--navy);margin-bottom:0.28rem}
+.series p{font-size:0.81rem;color:var(--lgray);line-height:1.6}
+
+/* ── SKILLS ── */
+.skill-grid{display:grid;grid-template-columns:1fr 1fr;gap:0.85rem}
+.sk{border:1px solid var(--border);padding:1.05rem}
+.sk h4{font-size:0.66rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--mid);margin-bottom:0.75rem}
+.pill{display:inline-block;background:var(--pale);color:var(--navy);font-size:0.77rem;padding:0.2rem 0.6rem;margin:0.16rem 0.1rem;border-radius:12px}
+.pill.r{background:var(--blush);color:#7a3a62}
+
+/* ── EDUCATION ── */
+.edu-row{display:flex;gap:1.6rem;padding:1rem 0;border-bottom:1px solid var(--border);align-items:flex-start}
+.edu-row:last-child{border:none}
+.edu-yr{font-size:0.77rem;color:var(--lgray);min-width:80px;padding-top:0.15rem;font-style:italic;flex-shrink:0}
+.edu-deg{font-size:0.95rem;font-weight:500;color:var(--navy);margin-bottom:0.14rem}
+.edu-sch{font-size:0.82rem;color:var(--mid)}
+
+/* ── CONTACT ── */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:0.85rem;margin-bottom:1.5rem}
+.ci{padding:0.95rem 1.1rem;border:1px solid var(--border)}
+.ci.hi{border-color:var(--mid);border-top-width:2px}
+.ci-l{font-size:0.64rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--lgray);margin-bottom:0.28rem}
+.ci-v{font-size:0.88rem;color:var(--navy);font-weight:500;word-break:break-all}
+.ci-v a{color:var(--navy);text-decoration:none}
+.ci-v a:hover{color:var(--mid);text-decoration:underline}
+
+/* ── COVER LETTER ── */
+.cl-box{border:1px solid var(--border);border-top:3px solid var(--mid);padding:1.7rem;margin-top:0.5rem}
+.cl-header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:1.3rem;flex-wrap:wrap;gap:0.6rem}
+.cl-name{font-family:'Cormorant Garamond',serif;font-size:1.18rem;font-weight:500;color:var(--navy)}
+.cl-contact{font-size:0.76rem;color:var(--lgray);text-align:right;line-height:1.75}
+.cl-greeting{font-size:0.9rem;color:var(--navy);font-weight:500;margin-bottom:1rem}
+.cl-body{font-size:0.87rem;color:var(--gray);line-height:1.82}
+.cl-body p{margin-bottom:0.9rem}
+.cl-body p:last-child{margin-bottom:0}
+.cl-sign{margin-top:1.3rem;font-size:0.87rem;color:var(--navy)}
+.cl-sign .sig{font-family:'Cormorant Garamond',serif;font-size:1.15rem;margin-top:0.35rem;font-style:italic}
+
+/* ── RESPONSIVE ── */
+@media(max-width:580px){
+  .hero h1{font-size:2.4rem}
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .posts{grid-template-columns:1fr}
+  .quick{grid-template-columns:1fr}
+  .skill-grid{grid-template-columns:1fr}
+  .contact-grid{grid-template-columns:1fr}
+  .metrics{grid-template-columns:repeat(2,1fr)}
+  section{padding:1.8rem 1.4rem}
+  .hero{padding:2.5rem 1.4rem 2rem}
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-inner">
+    <h1>Elnaz <em>Rezaei</em></h1>
+    <p class="hero-role">Social Media Manager &middot; Content Strategist &middot; Digital Communications</p>
+    <div class="hero-chips">
+      <span class="chip">Gie&szlig;en, Germany</span>
+      <span class="chip">Available 2026</span>
+      <span class="chip r">EN C2 &middot; DE C1 &middot; FA native</span>
+    </div>
+    <div class="hero-meta">
+      <span>+49 152 285 94211</span>
+      <a href="mailto:elnaz.rezaei2000@gmail.com">elnaz.rezaei2000@gmail.com</a>
+      <a href="https://linkedin.com/in/elnaz-rezaei2000" target="_blank" rel="noopener">linkedin.com/in/elnaz-rezaei2000</a>
+    </div>
+  </div>
+</header>
+
+<div class="nav-wrap">
+  <nav>
+    <a href="#about" class="active" onclick="show('about',this)">About</a>
+    <a href="#work" onclick="show('work',this)">Work</a>
+    <a href="#skills" onclick="show('skills',this)">Skills</a>
+    <a href="#education" onclick="show('education',this)">Education</a>
+    <a href="#contact" onclick="show('contact',this)">Contact</a>
+  </nav>
+</div>
+
+<!-- ABOUT -->
+<section id="about" class="active">
+  <div class="inner">
+    <div class="sec-label">About me</div>
+    <p class="bio">I am a social media manager and content strategist with <strong>over two and a half years of experience</strong> running digital communications for academic and environmental organisations at JLU Giessen. I handle everything from content planning and visual design to video editing and web management. My <strong>MA in Anglophone Literatures, Culture and Media</strong> shapes the way I think about audiences and storytelling, and being fluent in English, German, and Persian lets me work across cultures without losing anything in translation.</p>
+    <div class="quick">
+      <div class="qf"><div class="qf-l">Current role</div><div class="qf-v">Social Media and Web Assistant, GCSC</div></div>
+      <div class="qf"><div class="qf-l">Avg. LinkedIn engagement</div><div class="qf-v">31.3% (industry avg: 1 to 3%)</div></div>
+      <div class="qf"><div class="qf-l">Platforms managed</div><div class="qf-v">IG &middot; LI &middot; FB &middot; YT &middot; X &middot; TikTok</div></div>
+      <div class="qf"><div class="qf-l">Degree in progress</div><div class="qf-v">MA at JLU Giessen, graduating 2026</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- WORK -->
+<section id="work">
+  <div class="inner">
+    <div class="sec-label">Selected work and results</div>
+    <div class="stats">
+      <div><div class="sn">6,075</div><div class="sl">LinkedIn impressions</div></div>
+      <div><div class="sn">31.3%</div><div class="sl">Avg. engagement rate</div></div>
+      <div><div class="sn">48%</div><div class="sl">Peak engagement rate</div></div>
+      <div><div class="sn">774</div><div class="sl">Video views</div></div>
+    </div>
+
+    <div class="proj-block">
+      <div class="proj-head">
+        <div class="proj-logo g">GCSC</div>
+        <div>
+          <div class="proj-name">International Graduate Centre for the Study of Culture</div>
+          <div class="proj-period">Nov 2023 to present &middot; JLU Giessen &middot; LinkedIn, YouTube, Web</div>
+        </div>
+      </div>
+      <p class="proj-desc">I manage the centre's digital communications from end to end: building the content strategy, designing visual templates, covering events with photography and video, running the #MeetUsMonday series, and keeping the website up to date via Plone CMS. Every piece of content is planned, produced, and reviewed by me independently.</p>
+      <div class="metrics">
+        <div class="metric hi"><div class="mn">6,075</div><div class="ml">Total impressions</div></div>
+        <div class="metric hi"><div class="mn">1,902</div><div class="ml">Total engagements</div></div>
+        <div class="metric hi"><div class="mn">31.3%</div><div class="ml">Avg engagement rate</div></div>
+        <div class="metric"><div class="mn">48.0%</div><div class="ml">Peak engagement rate</div></div>
+        <div class="metric"><div class="mn">774</div><div class="ml">Video views</div></div>
+        <div class="metric"><div class="mn">37 to 42%</div><div class="ml">Avg click-through rate</div></div>
+      </div>
+      <div class="sub-lbl">Top performing posts</div>
+      <div class="posts">
+        <div class="post">
+          <div class="er">48.0% ER</div>
+          <div class="post-tag">#Throwback &middot; Photo post</div>
+          <div class="post-title">New Academic Year Welcome: cohort celebration and alumni farewell</div>
+          <div class="post-stats"><span class="ps"><strong>1,275</strong> impressions</span><span class="ps"><strong>612</strong> engagements</span><span class="ps"><strong>66</strong> reactions</span></div>
+        </div>
+        <div class="post">
+          <div class="er">44.9% ER</div>
+          <div class="post-tag">Document post</div>
+          <div class="post-title">Keynote Lecture Series Overview: 6-page programme document</div>
+          <div class="post-stats"><span class="ps"><strong>624</strong> impressions</span><span class="ps"><strong>280</strong> engagements</span><span class="ps"><strong>19</strong> reactions</span></div>
+        </div>
+        <div class="post">
+          <div class="er">41.0% ER</div>
+          <div class="post-tag">Event coverage &middot; Photo</div>
+          <div class="post-title">Welcome Cohort 2025: event photography and editorial caption</div>
+          <div class="post-stats"><span class="ps"><strong>1,316</strong> impressions</span><span class="ps"><strong>539</strong> engagements</span><span class="ps"><strong>40</strong> reactions</span></div>
+        </div>
+        <div class="post">
+          <div class="er gold">11.8% ER</div>
+          <div class="post-tag">#MeetUsMonday &middot; Video series</div>
+          <div class="post-title">Team spotlight video: 559 views, 42 reactions, 4 comments</div>
+          <div class="post-stats"><span class="ps"><strong>1,709</strong> impressions</span><span class="ps"><strong>202</strong> engagements</span><span class="ps"><strong>559</strong> video views</span></div>
+        </div>
+      </div>
+      <div class="sub-lbl">Content series</div>
+      <div class="series"><h4>#MeetUsMonday</h4><p>A recurring bi-weekly video series introducing GCSC team members and doctoral candidates. I came up with the format, designed the visual template, handled filming at events, and wrote every caption.</p></div>
+      <div class="series"><h4>Keynote Lecture Series and Event Coverage</h4><p>Full event content from start to finish: photography on location, caption writing, post-event recaps, and document posts linking to programme materials. Event posts averaged above 40% engagement.</p></div>
+    </div>
+
+    <div class="proj-block">
+      <div class="proj-head">
+        <div class="proj-logo h">HC</div>
+        <div>
+          <div class="proj-name">HydroCrowd</div>
+          <div class="proj-period">Aug 2024 to Dec 2025 &middot; JLU Giessen &middot; Instagram, Facebook, X</div>
+        </div>
+      </div>
+      <p class="proj-desc">I took over a dormant social media presence and rebuilt it from scratch across three platforms. This included creating the visual identity, writing all copy, designing graphics in Canva, and launching a weekly educational series. The content was later reshared by university networks and environmental partner organisations.</p>
+      <div class="metrics">
+        <div class="metric hi"><div class="mn">3</div><div class="ml">Platforms relaunched</div></div>
+        <div class="metric hi"><div class="mn">12</div><div class="ml">Facebook posts (Oct to Dec)</div></div>
+        <div class="metric hi"><div class="mn">248</div><div class="ml">FB impressions (Oct to Dec)</div></div>
+      </div>
+      <div class="sub-lbl">Content series</div>
+      <div class="series"><h4>Friday Flows: Weekly Educational Science Series</h4><p>A weekly series making hydrological research accessible to a general audience. I researched, scripted, and designed each post independently, covering topics from groundwater and stable isotopes to wetlands and urban heat islands.</p></div>
+      <div class="series"><h4>Brand Identity and Platform Relaunch</h4><p>Built the full visual identity for HydroCrowd across Instagram, Facebook, and X: colour palette, post templates, tone of voice, and content formats. Content was reshared by university and environmental partner accounts.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="inner">
+    <div class="sec-label">Skills</div>
+    <div class="skill-grid">
+      <div class="sk"><h4>Strategy and content</h4><span class="pill">Content strategy</span><span class="pill">Editorial planning</span><span class="pill">Brand storytelling</span><span class="pill">Copywriting</span><span class="pill">Campaign execution</span><span class="pill">Community engagement</span></div>
+      <div class="sk"><h4>Design and production</h4><span class="pill">Canva</span><span class="pill">DaVinci Resolve</span><span class="pill">CapCut</span><span class="pill">Visual identity design</span><span class="pill">Photography</span><span class="pill">Short-form video</span></div>
+      <div class="sk"><h4>Web and analytics</h4><span class="pill">Plone CMS</span><span class="pill">Web content management</span><span class="pill">Meta Business Suite</span><span class="pill">LinkedIn Analytics</span><span class="pill">Performance reporting</span><span class="pill">SEO basics</span></div>
+      <div class="sk"><h4>Languages and soft skills</h4><span class="pill r">English C2</span><span class="pill r">German C1</span><span class="pill r">Persian native</span><span class="pill r">Intercultural communication</span><span class="pill r">Independent working</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education">
+  <div class="inner">
+    <div class="sec-label">Education and certifications</div>
+    <div class="edu-row"><div class="edu-yr">2023 to 2026</div><div><div class="edu-deg">MA Anglophone Literatures, Culture and Media</div><div class="edu-sch">Justus-Liebig-Universit&auml;t Giessen</div></div></div>
+    <div class="edu-row"><div class="edu-yr">2018 to 2022</div><div><div class="edu-deg">BA English Literature</div><div class="edu-sch">Shiraz University, Iran</div></div></div>
+    <div class="edu-row"><div class="edu-yr">Certificate</div><div><div class="edu-deg">Meta Social Media Management Certificate</div><div class="edu-sch">Meta / Coursera</div></div></div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="inner">
+    <div class="sec-label">Get in touch</div>
+    <div class="contact-grid">
+      <div class="ci hi"><div class="ci-l">Email</div><div class="ci-v"><a href="mailto:elnaz.rezaei2000@gmail.com">elnaz.rezaei2000@gmail.com</a></div></div>
+      <div class="ci hi"><div class="ci-l">Phone</div><div class="ci-v">+49 152 285 94211</div></div>
+      <div class="ci"><div class="ci-l">LinkedIn</div><div class="ci-v"><a href="https://linkedin.com/in/elnaz-rezaei2000" target="_blank" rel="noopener">linkedin.com/in/elnaz-rezaei2000</a></div></div>
+      <div class="ci"><div class="ci-l">Location</div><div class="ci-v">Gie&szlig;en, Hessen, Germany</div></div>
+    </div>
+
+    <div class="sec-label" style="margin-top:2rem">Cover letter</div>
+    <div class="cl-box">
+      <div class="cl-header">
+        <div class="cl-name">Elnaz Rezaei</div>
+        <div class="cl-contact">Gie&szlig;en, Germany &middot; +49 152 285 94211<br>elnaz.rezaei2000@gmail.com<br>linkedin.com/in/elnaz-rezaei2000</div>
+      </div>
+      <div class="cl-greeting">Dear Hiring Team,</div>
+      <div class="cl-body">
+        <p>I am a Social Media Manager and Content Strategist with two and a half years of experience building digital communications for academic and environmental organisations at JLU Giessen. My work covers everything from content strategy and visual design to video production and web management, and the results have been strong: my LinkedIn posts have averaged a 31.3% organic engagement rate, with a peak of 48%, compared to a platform average of 1 to 3%.</p>
+        <p>At the GCSC, I run the centre's digital presence independently. I develop the content strategy, produce event photography and video, design recurring series such as #MeetUsMonday, and maintain the website via Plone CMS. At HydroCrowd, I rebuilt the brand's social media presence across Instagram, Facebook, and X from scratch, and launched a weekly educational science series that was later reshared by university networks and environmental partners.</p>
+        <p>My MA in Anglophone Literatures, Culture and Media sharpens the way I think about language and audience. I am fluent in English (C2) and German (C1), which means I can write compelling content for both international and German-speaking audiences without any extra layer of adaptation.</p>
+        <p>I would be glad to talk about how my experience could support your team. I look forward to hearing from you.</p>
+      </div>
+      <div class="cl-sign">Yours sincerely,<div class="sig">Elnaz Rezaei</div></div>
+    </div>
+  </div>
+</section>
+
+<script>
+function show(id, el) {
+  document.querySelectorAll('section').forEach(s => s.classList.remove('active'));
+  document.querySelectorAll('nav a').forEach(a => a.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  el.classList.add('active');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+  return false;
+}
+</script>
+</body>
+</html>
