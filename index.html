@@ -28,7 +28,9 @@ body{font-family:'DM Sans',sans-serif;background:var(--white);color:var(--navy);
 .hero{background:linear-gradient(135deg,#004a80 0%,#006ab3 55%,#1a7ec8 100%);padding:3.5rem 2.5rem 2.5rem;position:relative;overflow:hidden}
 .hero::before{content:'';position:absolute;right:-60px;top:-60px;width:260px;height:260px;border-radius:50%;background:rgba(164,190,223,0.1);pointer-events:none}
 .hero::after{content:'';position:absolute;right:60px;bottom:-70px;width:160px;height:160px;border-radius:50%;background:rgba(200,160,188,0.08);pointer-events:none}
-.hero-inner{max-width:var(--max);margin:0 auto;position:relative;z-index:1}
+.hero-inner{max-width:var(--max);margin:0 auto;position:relative;z-index:1;display:flex;justify-content:space-between;align-items:center;gap:2rem}
+.hero-text{flex:1}
+.hero-photo{width:110px;height:110px;border-radius:50%;border:3px solid rgba(255,255,255,0.3);object-fit:cover;flex-shrink:0}
 .hero h1{font-family:'Cormorant Garamond',serif;font-size:3.2rem;font-weight:500;color:#fff;line-height:1.0;letter-spacing:-0.01em}
 .hero h1 em{font-style:normal;color:var(--white)}
 .hero-role{font-size:0.78rem;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.58);margin-top:0.5rem;font-weight:300}
@@ -154,7 +156,8 @@ section.active{display:block}
 <body>
 
 <header class="hero">
-  <div class="hero-inner">
+ <div class="hero-inner">
+  <div class="hero-text">
     <h1>Elnaz <em>Rezaei</em></h1>
     <p class="hero-role">Social Media Manager &middot; Content Strategist &middot; Digital Communications</p>
     <div class="hero-chips">
@@ -167,8 +170,10 @@ section.active{display:block}
       <span>+49 152 285 94211</span>
       <a href="mailto:elnaz.rezaei2000@gmail.com">elnaz.rezaei2000@gmail.com</a>
       <a href="https://linkedin.com/in/elnaz-rezaei2000" target="_blank" rel="noopener">linkedin.com/in/elnaz-rezaei2000</a>
-    </div>
+   </div>
   </div>
+  <img src="profile.png" alt="Elnaz Rezaei" class="hero-photo">
+</div>
 </header>
 
 <div class="nav-wrap">
