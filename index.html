@@ -28,11 +28,9 @@ body{font-family:'DM Sans',sans-serif;background:var(--white);color:var(--navy);
 .hero{background:linear-gradient(135deg,#004a80 0%,#006ab3 55%,#1a7ec8 100%);padding:3.5rem 2.5rem 2.5rem;position:relative;overflow:hidden}
 .hero::before{content:'';position:absolute;right:-60px;top:-60px;width:260px;height:260px;border-radius:50%;background:rgba(164,190,223,0.1);pointer-events:none}
 .hero::after{content:'';position:absolute;right:60px;bottom:-70px;width:160px;height:160px;border-radius:50%;background:rgba(200,160,188,0.08);pointer-events:none}
-.hero-inner{max-width:var(--max);margin:0 auto;position:relative;z-index:1;display:flex;justify-content:space-between;align-items:center;gap:2rem}
-.hero-text{flex:1}
-.hero-photo{width:110px;height:110px;border-radius:50%;border:3px solid rgba(255,255,255,0.3);object-fit:cover;flex-shrink:0}
+.hero-inner{max-width:var(--max);margin:0 auto;position:relative;z-index:1}
 .hero h1{font-family:'Cormorant Garamond',serif;font-size:3.2rem;font-weight:500;color:#fff;line-height:1.0;letter-spacing:-0.01em}
-.hero h1 em{font-style:normal;color:var(--white)}
+.hero h1 em{font-style:italic;color:var(--pale)}
 .hero-role{font-size:0.78rem;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.58);margin-top:0.5rem;font-weight:300}
 .hero-chips{display:flex;gap:0.45rem;flex-wrap:wrap;margin-top:1.1rem}
 .chip{padding:0.25rem 0.85rem;border:1px solid rgba(164,190,223,0.45);color:rgba(255,255,255,0.82);font-size:0.74rem;border-radius:20px;font-family:'DM Sans',sans-serif}
@@ -97,7 +95,6 @@ section.active{display:block}
 .ps strong{color:var(--mid);font-weight:500}
 .er{position:absolute;top:0.75rem;right:0.75rem;background:var(--mid);color:#fff;font-size:0.67rem;font-weight:500;padding:0.15rem 0.55rem;border-radius:20px}
 .er.gold{background:#9a6e10}
-.er.green{background:#2e7d4f}
 
 /* ── SERIES CARDS ── */
 .series{border:1px solid var(--border);border-left:3px solid var(--light);padding:1.05rem;margin-bottom:0.65rem}
@@ -156,24 +153,20 @@ section.active{display:block}
 <body>
 
 <header class="hero">
- <div class="hero-inner">
-  <div class="hero-text">
+  <div class="hero-inner">
     <h1>Elnaz <em>Rezaei</em></h1>
-    <p class="hero-role">Social Media Manager &middot; Content Strategist &middot; Digital Communications</p>
+    <p class="hero-role">Digital Marketing &middot; Brand Communications &middot; Content Strategy</p>
     <div class="hero-chips">
       <span class="chip">Gie&szlig;en, Germany</span>
       <span class="chip">Available 2026</span>
       <span class="chip r">EN C2 &middot; DE C1 &middot; FA native</span>
-      <span class="chip">Born in 2000</span>
     </div>
     <div class="hero-meta">
       <span>+49 152 285 94211</span>
       <a href="mailto:elnaz.rezaei2000@gmail.com">elnaz.rezaei2000@gmail.com</a>
       <a href="https://linkedin.com/in/elnaz-rezaei2000" target="_blank" rel="noopener">linkedin.com/in/elnaz-rezaei2000</a>
-   </div>
+    </div>
   </div>
-  <img src="elnazrezaei.png" alt="Elnaz Rezaei" class="hero-photo">
-</div>
 </header>
 
 <div class="nav-wrap">
@@ -190,11 +183,11 @@ section.active{display:block}
 <section id="about" class="active">
   <div class="inner">
     <div class="sec-label">About me</div>
-    <p class="bio">I am a social media manager and content strategist with <strong>over two and a half years of experience</strong> running digital communications for academic and environmental organisations at JLU Giessen. I handle everything from content planning and visual design to video editing and web management. My <strong>MA in Anglophone Literatures, Culture and Media</strong> shapes the way I think about audiences and storytelling, and being fluent in English, German, and Persian lets me work across cultures without losing anything in translation.</p>
+    <p class="bio">I am a digital marketing and communications professional with <strong>over two and a half years of experience</strong> building brand presence, creating content strategies, and driving measurable engagement for organisations at JLU Giessen. I love the full picture of marketing: understanding an audience, shaping a brand voice, producing content that actually connects, and using data to make it better over time. My <strong>MA in Anglophone Literatures, Culture and Media</strong> gives me a strong foundation in how people communicate and what makes a message land, and being fluent in English, German, and Persian means I can bring that instinct to audiences across markets.</p>
     <div class="quick">
       <div class="qf"><div class="qf-l">Current role</div><div class="qf-v">Social Media and Web Assistant, GCSC</div></div>
       <div class="qf"><div class="qf-l">Avg. LinkedIn engagement</div><div class="qf-v">31.3% (industry avg: 1 to 3%)</div></div>
-      <div class="qf"><div class="qf-l">Platforms managed</div><div class="qf-v">IG &middot; LI &middot; FB &middot; YT &middot; X &middot; TikTok</div></div>
+      <div class="qf"><div class="qf-l">Channels managed</div><div class="qf-v">IG &middot; LI &middot; FB &middot; YT &middot; X &middot; TikTok</div></div>
       <div class="qf"><div class="qf-l">Degree in progress</div><div class="qf-v">MA at JLU Giessen, graduating 2026</div></div>
     </div>
   </div>
@@ -219,7 +212,7 @@ section.active{display:block}
           <div class="proj-period">Nov 2023 to present &middot; JLU Giessen &middot; LinkedIn, YouTube, Web</div>
         </div>
       </div>
-      <p class="proj-desc">I manage the centre's digital communications from end to end: building the content strategy, designing visual templates, covering events with photography and video, running the #MeetUsMonday series, and keeping the website up to date via Plone CMS. Every piece of content is planned, produced, and reviewed by me independently.</p>
+      <p class="proj-desc">As the sole person responsible for the GCSC's digital marketing and communications, I manage the full cycle from brand strategy to execution. I plan and produce content across LinkedIn and YouTube, build and maintain the visual brand identity, run original content series, cover events, and oversee the organisation's website. The results have consistently outperformed platform benchmarks, with an average engagement rate more than ten times above the LinkedIn average.</p>
       <div class="metrics">
         <div class="metric hi"><div class="mn">6,075</div><div class="ml">Total impressions</div></div>
         <div class="metric hi"><div class="mn">1,902</div><div class="ml">Total engagements</div></div>
@@ -232,32 +225,32 @@ section.active{display:block}
       <div class="posts">
         <div class="post">
           <div class="er">48.0% ER</div>
-          <div class="post-tag">#Throwback &middot; Photo post</div>
-          <div class="post-title">New Academic Year Welcome: cohort celebration and alumni farewell</div>
+          <div class="post-tag">Community content &middot; Brand storytelling</div>
+          <div class="post-title">Academic Year Welcome: celebrating new cohort and alumni milestones</div>
           <div class="post-stats"><span class="ps"><strong>1,275</strong> impressions</span><span class="ps"><strong>612</strong> engagements</span><span class="ps"><strong>66</strong> reactions</span></div>
         </div>
         <div class="post">
           <div class="er">44.9% ER</div>
-          <div class="post-tag">Document post</div>
-          <div class="post-title">Keynote Lecture Series Overview: 6-page programme document</div>
+          <div class="post-tag">Content marketing &middot; Document post</div>
+          <div class="post-title">Keynote Lecture Series: programme overview driving clicks and downloads</div>
           <div class="post-stats"><span class="ps"><strong>624</strong> impressions</span><span class="ps"><strong>280</strong> engagements</span><span class="ps"><strong>19</strong> reactions</span></div>
         </div>
         <div class="post">
           <div class="er">41.0% ER</div>
-          <div class="post-tag">Event coverage &middot; Photo</div>
-          <div class="post-title">Welcome Cohort 2025: event photography and editorial caption</div>
+          <div class="post-tag">Event marketing &middot; Photo campaign</div>
+          <div class="post-title">Welcome Cohort 2025: event photography turned into a high-performing post</div>
           <div class="post-stats"><span class="ps"><strong>1,316</strong> impressions</span><span class="ps"><strong>539</strong> engagements</span><span class="ps"><strong>40</strong> reactions</span></div>
         </div>
         <div class="post">
-          <div class="er">11.8% ER</div>
-          <div class="post-tag">#MeetUsMonday &middot; Video series</div>
-          <div class="post-title">Team spotlight video: 559 views, 42 reactions, 4 comments</div>
+          <div class="er green">11.8% ER</div>
+          <div class="post-tag">#MeetUsMonday &middot; Video marketing</div>
+          <div class="post-title">People-first brand series: 559 video views, 42 reactions, 4 comments</div>
           <div class="post-stats"><span class="ps"><strong>1,709</strong> impressions</span><span class="ps"><strong>202</strong> engagements</span><span class="ps"><strong>559</strong> video views</span></div>
         </div>
       </div>
       <div class="sub-lbl">Content series</div>
-      <div class="series"><h4>#MeetUsMonday</h4><p>A recurring bi-weekly video series introducing GCSC team members and doctoral candidates. I came up with the format, designed the visual template, handled filming at events, and wrote every caption.</p></div>
-      <div class="series"><h4>Keynote Lecture Series and Event Coverage</h4><p>Full event content from start to finish: photography on location, caption writing, post-event recaps, and document posts linking to programme materials. Event posts averaged above 40% engagement.</p></div>
+      <div class="series"><h4>#MeetUsMonday</h4><p>A people-first brand series designed to humanise the GCSC and grow its community on LinkedIn. I developed the full concept: the format, visual identity, filming approach, and editorial voice. Running consistently every other week, it became one of the centre's most recognisable content formats.</p></div>
+      <div class="series"><h4>Keynote Lecture Series and Event Marketing</h4><p>End-to-end event marketing: on-location photography, post-event content, programme documents, and recap posts. This series showed how consistent event coverage builds brand credibility, with posts averaging above 40% engagement across the board.</p></div>
     </div>
 
     <div class="proj-block">
@@ -268,15 +261,15 @@ section.active{display:block}
           <div class="proj-period">Aug 2024 to Dec 2025 &middot; JLU Giessen &middot; Instagram, Facebook, X</div>
         </div>
       </div>
-      <p class="proj-desc">I took over a dormant social media presence and rebuilt it from scratch across three platforms. This included creating the visual identity, writing all copy, designing graphics in Canva, and launching a weekly educational series. The content was later reshared by university networks and environmental partner organisations.</p>
+      <p class="proj-desc">HydroCrowd had no active social media presence when I joined. I treated it as a brand launch: defining the visual identity, establishing the tone of voice, building content formats for three platforms, and creating an ongoing editorial strategy. The weekly Friday Flows series turned complex scientific research into content that a general audience could genuinely connect with, and the brand's reach grew through organic resharing by universities and environmental organisations.</p>
       <div class="metrics">
         <div class="metric hi"><div class="mn">3</div><div class="ml">Platforms relaunched</div></div>
         <div class="metric hi"><div class="mn">12</div><div class="ml">Facebook posts (Oct to Dec)</div></div>
         <div class="metric hi"><div class="mn">248</div><div class="ml">FB impressions (Oct to Dec)</div></div>
       </div>
       <div class="sub-lbl">Content series</div>
-      <div class="series"><h4>Friday Flows: Weekly Educational Science Series</h4><p>A weekly series making hydrological research accessible to a general audience. I researched, scripted, and designed each post independently, covering topics from groundwater and stable isotopes to wetlands and urban heat islands.</p></div>
-      <div class="series"><h4>Brand Identity and Platform Relaunch</h4><p>Built the full visual identity for HydroCrowd across Instagram, Facebook, and X: colour palette, post templates, tone of voice, and content formats. Content was reshared by university and environmental partner accounts.</p></div>
+      <div class="series"><h4>Friday Flows: Science Content Marketing</h4><p>A weekly content marketing series translating hydrological research into engaging posts for a non-specialist audience. Each edition was independently researched, written, and designed, covering topics from groundwater and water security to wetlands and climate change. It demonstrated that complex subject matter, handled well, builds a loyal and engaged following.</p></div>
+      <div class="series"><h4>Brand Identity and Multi-Platform Launch</h4><p>Developed the full brand identity for HydroCrowd's digital presence from scratch: visual language, colour palette, post templates, tone of voice, and channel-specific content formats across Instagram, Facebook, and X. The consistency of the brand led to organic resharing from partner organisations, extending reach well beyond the existing audience.</p></div>
     </div>
   </div>
 </section>
@@ -286,10 +279,10 @@ section.active{display:block}
   <div class="inner">
     <div class="sec-label">Skills</div>
     <div class="skill-grid">
-      <div class="sk"><h4>Strategy and content</h4><span class="pill">Content strategy</span><span class="pill">Editorial planning</span><span class="pill">Brand storytelling</span><span class="pill">Copywriting</span><span class="pill">Campaign execution</span><span class="pill">Community engagement</span></div>
-      <div class="sk"><h4>Design and production</h4><span class="pill">Canva</span><span class="pill">DaVinci Resolve</span><span class="pill">CapCut</span><span class="pill">Visual identity design</span><span class="pill">Photography</span><span class="pill">Short-form video</span><span class="pill">Figma</span></div>
-      <div class="sk"><h4>Web and analytics</h4><span class="pill">Plone CMS</span><span class="pill">Web content management</span><span class="pill">Meta Business Suite</span><span class="pill">LinkedIn Analytics</span><span class="pill">Performance reporting</span><span class="pill">SEO basics</span></div>
-      <div class="sk"><h4>Languages and soft skills</h4><span class="pill r">English C2</span><span class="pill r">German C1</span><span class="pill r">Persian native</span><span class="pill r">Intercultural communication</span><span class="pill r">Independent working</span></div>
+      <div class="sk"><h4>Marketing and strategy</h4><span class="pill">Digital marketing</span><span class="pill">Content marketing</span><span class="pill">Brand communications</span><span class="pill">Content strategy</span><span class="pill">Campaign execution</span><span class="pill">Audience research</span><span class="pill">Editorial planning</span><span class="pill">Community management</span></div>
+      <div class="sk"><h4>Content and creative</h4><span class="pill">Copywriting</span><span class="pill">Brand storytelling</span><span class="pill">Canva</span><span class="pill">Figma</span><span class="pill">DaVinci Resolve</span><span class="pill">CapCut</span><span class="pill">Photography</span><span class="pill">Short-form video</span></div>
+      <div class="sk"><h4>Channels and analytics</h4><span class="pill">LinkedIn</span><span class="pill">Instagram</span><span class="pill">Facebook</span><span class="pill">YouTube</span><span class="pill">TikTok</span><span class="pill">Meta Business Suite</span><span class="pill">LinkedIn Analytics</span><span class="pill">Google Analytics</span><span class="pill">Performance reporting</span></div>
+      <div class="sk"><h4>Languages and soft skills</h4><span class="pill r">English C2</span><span class="pill r">German C1</span><span class="pill r">Persian native</span><span class="pill r">Intercultural communication</span><span class="pill r">Project coordination</span><span class="pill r">Independent working</span></div>
     </div>
   </div>
 </section>
@@ -323,10 +316,10 @@ section.active{display:block}
       </div>
       <div class="cl-greeting">Dear Hiring Team,</div>
       <div class="cl-body">
-        <p>I am a Social Media Manager and Content Strategist with two and a half years of experience building digital communications for academic and environmental organisations at JLU Giessen. My work covers everything from content strategy and visual design to video production and web management, and the results have been strong: my LinkedIn posts have averaged a 31.3% organic engagement rate, with a peak of 48%, compared to a platform average of 1 to 3%.</p>
-        <p>At the GCSC, I run the centre's digital presence independently. I develop the content strategy, produce event photography and video, design recurring series such as #MeetUsMonday, and maintain the website via Plone CMS. At HydroCrowd, I rebuilt the brand's social media presence across Instagram, Facebook, and X from scratch, and launched a weekly educational science series called #FridayFlows. Our content was later reshared by university networks and environmental partners.</p>
-        <p>My MA in Anglophone Literatures, Culture and Media sharpens the way I think about language and audience. I am fluent in English (C2) and German (C1), which means I can write compelling content for both international and German-speaking audiences without any extra layer of adaptation.</p>
-        <p>I would be glad to talk about how my experience could support your team. I look forward to hearing from you.</p>
+        <p>I am a digital marketing and communications professional with two and a half years of experience building brand presence, developing content strategies, and delivering measurable results at JLU Giessen. I enjoy the full scope of marketing: from shaping a brand's voice and visual identity to producing multi-channel campaigns and using performance data to refine what works. My LinkedIn content has averaged a 31.3% organic engagement rate with a peak of 48%, in a landscape where 1 to 3% is considered strong.</p>
+        <p>At the GCSC, I manage the centre's entire digital marketing operation independently. This includes brand strategy, content planning across LinkedIn and YouTube, event marketing, the recurring #MeetUsMonday video series, and maintaining the organisation's website. At HydroCrowd, I led a full brand launch across Instagram, Facebook, and X from the ground up, developing the visual identity, editorial strategy, and a weekly content marketing series that grew the brand's reach through organic partnerships with universities and environmental organisations.</p>
+        <p>I bring genuine cross-cultural fluency to marketing work, in English (C2), German (C1), and Persian. This means I can think about brand voice, tone, and audience not just in one language but across different cultural contexts, which I believe is a real asset for any organisation communicating with diverse markets.</p>
+        <p>I would love to bring this experience and energy to your team. I look forward to hearing from you.</p>
       </div>
       <div class="cl-sign">Yours sincerely,<div class="sig">Elnaz Rezaei</div></div>
     </div>
